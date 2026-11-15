@@ -213,8 +213,7 @@ public class Calc {
 		btnMultiplicacao.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				valor1 = Double.parseDouble(JTFResultado.getText());
-				JTFResultado.setText(" ");
-				resultadoAcumulado += Double.parseDouble(JTFResultado.getText());
+				JTFResultado.setText("");
 				op = "Multiplicacao";		
 			}
 		});
@@ -254,7 +253,7 @@ public class Calc {
 			if (JTFResultado.getText().trim().isEmpty()) {
 				return;
 			}
-			if (!"Potencia".equals(op) && !"Divisao".equals(op)) {
+			if (!"Potencia".equals(op) && !"Divisao".equals(op) && !"Multiplicacao".equals(op)) {
 				valor1 = Double.parseDouble(JTFResultado.getText());
 			}
 			valor2 = Double.parseDouble(JTFResultado.getText());
@@ -275,6 +274,9 @@ public class Calc {
 			}
 	if("Potencia".equals(op)) {
 		JTFResultado.setText(String.valueOf(Math.pow(valor1, valor2)));
+	}
+	if("Multiplicacao".equals(op)) {
+		JTFResultado.setText(String.valueOf(valor1 * valor2));
 	}
 	if("Divisao".equals(op)) {
 		if (valor2 == 0) {
