@@ -39,7 +39,7 @@ public class Calc {
 
 	private void initialize() {
 		frmSamuelVieiraDeSouza = new JFrame();
-		frmSamuelVieiraDeSouza.getContentPane().setBackground(new Color(118, 106, 206));
+		frmSamuelVieiraDeSouza.getContentPane().setBackground(new Color(120, 112, 206));
 		frmSamuelVieiraDeSouza.setTitle("Samuel veira de souza - RA: 0024329");
 		frmSamuelVieiraDeSouza.getContentPane().setFont(new Font("Arial", Font.BOLD, 12));
 		frmSamuelVieiraDeSouza.setBounds(100, 100, 400, 502);
